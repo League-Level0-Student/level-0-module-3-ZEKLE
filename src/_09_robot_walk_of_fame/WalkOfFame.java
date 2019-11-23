@@ -16,8 +16,8 @@ public class WalkOfFame {
 		// You also need to show the robot to see the result of this line.
 		
 		// 2. Make the robot draw a star shape. Hint: 144.
-		for (int i = 0; i < 4; i++) {
-			
+		for (int i = 0; i < 50; i++) {
+			rob.move(50);
 		
 		for (int i1 = 0; i1 < 10; i1++) {
 			rob.setPenWidth(30);
