@@ -32,6 +32,8 @@ public class FizzBuzz {
 			
 		    if (i % 3 == 0){
 		        System.out.println("fizz");
+		     } else {
+		    	System.out.println(i);
 		    }
 		   
 		    	 {
