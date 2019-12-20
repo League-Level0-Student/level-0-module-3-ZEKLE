@@ -8,27 +8,61 @@ import org.jointheleague.graphical.robot.Robot;
 
 public class obedient_robots {
 	public static void main(String[] args) {
+		String shape = JOptionPane.showInputDialog(null, "What shape would you like?");
+		String color = JOptionPane.showInputDialog(null, "What color would you like?");
 		Robot r2 = new Robot();
-		String shape = JOptionPane.showInputDialog(null, "Would you like a square, triangle, or circle?");
 		r2.penDown();
 		r2.setSpeed(10);
-		if(shape.equals("square")) {
-		for (int i = 0; i < 4; i++) {
-			r2.move(100);
-			r2.turn(90);
+		if (color.equals("red")) {
+			r2.setPenColor(Color.RED);
 		} else {
-			if(shape.equals("triangle")) {
-				for (int i = 0; i < 3; i++) {
-					r2.move(100);
-					r2.turn(130);
-		}
-				
+			if (color.equals("green")) {
+				r2.setPenColor(Color.GREEN);
+			} else {
+				if (color.equals("blue")) {
+					r2.setPenColor(Color.blue);
 				}
-				
-			}
-		
+		if (shape.equals("square")) {
+			drawsquare(r2);
 		}
-
+		if (shape.equals("triangle")) {
+		 drawTriangle(r2);
+		}
+		if (shape.equals("circle")) {
+			drawCircle(r2);
+			
+		}
+			}
+		}
+		      }
+	
+	public static void drawsquare(Robot R) {
+		R.move(100);
+		R.turn(90);
+		R.move(100);
+		R.turn(90);
+		R.move(100);
+		R.turn(90);
+		R.move(100);
+		R.turn(90);
+	}
+	public static void drawTriangle(Robot O) {
+		O.turn(270);
+		O.move(100);
+		O.turn(120);
+		O.move(100);
+		O.turn(120);
+		O.move(100);
+		O.turn(120);
+	}
+	public static void drawCircle(Robot B) {
+		for (int i = 0; i < 360; i++) {
+			B.move(1);
+			B.turn(1);
+		}
 	}
 }
-	
+		
+		
+
+
