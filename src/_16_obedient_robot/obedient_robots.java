@@ -8,20 +8,11 @@ import org.jointheleague.graphical.robot.Robot;
 
 public class obedient_robots {
 	public static void main(String[] args) {
-		String shape = JOptionPane.showInputDialog(null, "What shape would you like?");
 		String color = JOptionPane.showInputDialog(null, "What color would you like?");
-		Robot r2 = new Robot();
+		String shape = JOptionPane.showInputDialog(null, "What shape would you like?");
+				Robot r2 = new Robot();
 		r2.penDown();
 		r2.setSpeed(10);
-		if (color.equals("red")) {
-			r2.setPenColor(Color.RED);
-		} else {
-			if (color.equals("green")) {
-				r2.setPenColor(Color.GREEN);
-			} else {
-				if (color.equals("blue")) {
-					r2.setPenColor(Color.blue);
-				}
 		if (shape.equals("square")) {
 			drawsquare(r2);
 		}
@@ -30,8 +21,19 @@ public class obedient_robots {
 		}
 		if (shape.equals("circle")) {
 			drawCircle(r2);
+		
+			if (color.equals("red")) {
+				r2.setPenColor(Color.RED);
+			} else {
+				if (color.equals("green")) {
+					r2.setPenColor(Color.GREEN);
+				} else {
+					if (color.equals("blue")) {
+						r2.setPenColor(Color.blue);
+					}
 			
 		}
+		
 			}
 		}
 		      }
